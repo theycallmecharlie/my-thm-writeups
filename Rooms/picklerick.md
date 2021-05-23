@@ -184,6 +184,7 @@ And then, we're in
 
 #### FIRST FLAG
 > __ls -lha; pwd__ # on the command panel input, to se what files we got in the current directory, permissions and where we are using pwd
+~~~
 total 40K
 drwxr-xr-x 3 root   root   4.0K Feb 10  2019 .
 drwxr-xr-x 3 root   root   4.0K Feb 10  2019 ..
@@ -196,6 +197,7 @@ drwxrwxr-x 2 ubuntu ubuntu 4.0K Feb 10  2019 assets
 -rwxr-xr-x 1 ubuntu ubuntu 2.0K Feb 10  2019 portal.php
 -rwxr-xr-x 1 ubuntu ubuntu   17 Feb 10  2019 robots.txt
 /var/www/html
+~~~
 The file __Sup3rS3cretPickl3Ingred.txt__ seems to be promising, let's try use cat command to see the raw text.
 > __cat__ Sup3rS3cretPickl3Ingred.txt
 ![picklerickdenied](../Images/picklerickdenied.png)
@@ -213,6 +215,7 @@ Let's find out the second ingredient
 
 As we can see before, we are in __/var/www/html__, under 3 folders inside the __'/'__, let's go up them to '__/__' path
 > __cd ../../../../ && ls -lha && pwd && dir__  # Now we are in the '__/__' folder, we can se the permissions, files, directories. 
+~~~
 total 88K
 drwxr-xr-x  23 root root 4.0K May 23 17:05 .
 drwxr-xr-x  23 root root 4.0K May 23 17:05 ..
@@ -244,19 +247,21 @@ bin   etc	  lib	      media  proc  sbin  sys  var
 boot  home	  lib64       mnt    root  snap  tmp  vmlinuz
 dev   initrd.img  lost+found  opt    run   srv	 usr
 /
-
+~~~
 Let's go to __/home/__ to se what and how many users we got in the machine
 >__cd /home && ls__
+~~~
 drwxrwxrwx 2 root   root   4096 Feb 10  2019 rick
 drwxr-xr-x 4 ubuntu ubuntu 4096 Feb 10  2019 ubuntu
-
+~~~
 The machine has a user named Rick. Now, we're going into __/rick__ folder to wee what we can obtain in his user
 > __cd /home/rick && ls -lha__
+~~~
 total 12K
 drwxrwxrwx 2 root root 4.0K Feb 10  2019 .
 drwxr-xr-x 4 root root 4.0K Feb 10  2019 ..
 -rwxrwxrwx 1 root root   13 Feb 10  2019 second ingredients
-
+~~~
 We already know that __cat__ command is blocked :(, lets try with less command again
 > __cd /home/rick && less "second ingredients"__
 ![picklericksecondingredient](../Images/picklericksecondingredient.png)
