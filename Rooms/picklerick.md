@@ -1,4 +1,4 @@
-####[THM-ROOM](https://tryhackme.com/room/picklerick) - <span style="color:green">PICKLERICK</span>
+[THM-ROOM](https://tryhackme.com/room/picklerick) - <span style="color:green">PICKLERICK</span>
 ---
 ##### ABOUT THE ROOM
 This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle
@@ -12,7 +12,7 @@ Find _3 Flags (ingredients)_
 └─$ export inetip=10.10.230.33
 
 ---
-![homepage](./Images/picklerickhomepage.png)
+![homepage](../Images/picklerickhomepage.png)
 ##### SCAN
 ~~~
 ┌──(gh0st㉿shell)-[~/THM/picklerick]
@@ -173,13 +173,13 @@ DirBuster Stopped
 #### LOGIN
 Okay, we got 2 php pages, portal and login.
 Let's try out to login using what we got atm
-![loginpage](./Images/picklericklogin.png)
+![loginpage](../Images/picklericklogin.png)
 ```
 Login credentials
 User: R1ckRul3s 
 Pass: Wubbalubbadubdub
 ```
-![portalpage](./Images/picklerickportal.png)
+![portalpage](../Images/picklerickportal.png)
 And then, we're in
 
 #### FIRST FLAG
@@ -198,13 +198,13 @@ drwxrwxr-x 2 ubuntu ubuntu 4.0K Feb 10  2019 assets
 /var/www/html
 The file __Sup3rS3cretPickl3Ingred.txt__ seems to be promising, let's try use cat command to see the raw text.
 > __cat__ Sup3rS3cretPickl3Ingred.txt
-![picklerickdenied](./Images/picklerickdenied.png)
+![picklerickdenied](../Images/picklerickdenied.png)
 
 As you can see, cat command is blocked :( 
 Let's try with __less__ command
 
 > __less Sup3rS3cretPickl3Ingred.txt__
-![picklerickfirstingredient](./Images/picklerickfirstingredient.png)
+![picklerickfirstingredient](../Images/picklerickfirstingredient.png)
 
 Then we capture the first ingredient that Rick needs.
 Let's find out the second ingredient 
@@ -259,7 +259,7 @@ drwxr-xr-x 4 root root 4.0K Feb 10  2019 ..
 
 We already know that __cat__ command is blocked :(, lets try with less command again
 > __cd /home/rick && less "second ingredients"__
-![picklericksecondingredient](./Images/picklericksecondingredient.png)
+![picklericksecondingredient](../Images/picklericksecondingredient.png)
 
 Gzzz, we captured the second Flag/ingredient that Rick needs. Let's find out the last flag.
 
@@ -271,6 +271,6 @@ Normally, flags are stored in txt, then, we'll find every ".txt" extension, let'
 As response from the server, we can see a file named __3rd.txt__. let's see what's stored there
 
 > __sudo ls -l /root && sudo less /root/3rd.txt__
-![picklerickthirdingredient](./Images/picklerickthirdingredient.png)
+![picklerickthirdingredient](../Images/picklerickthirdingredient.png)
 
 We've reached the third ingredient that rick needs. Now it's just register the flags/ingredients to THM and terminate the Room.
