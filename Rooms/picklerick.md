@@ -135,7 +135,7 @@ There's a robots.txt in / folder. As before, let's do a GET request to see what 
 
 ~~~
 ┌──(gh0st㉿shell)-[~]
-└─$ curl -i 10.10.154.98/robots.txt         
+└─$ curl -i 10.10.230.33/robots.txt         
 HTTP/1.1 200 OK
 Date: Sun, 23 May 2021 17:06:11 GMT
 Server: Apache/2.4.18 (Ubuntu)
