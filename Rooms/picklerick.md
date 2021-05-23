@@ -7,10 +7,12 @@ Find _3 Flags (ingredients)_
 - What is the first ingredient Rick needs?
 - Whats the second ingredient Rick needs?
 - Whats the final ingredient Rick needs?]
-#####IP: 10.10.230.33
+
+__IP: 10.10.230.33__
+~~~
 ┌──(gh0st㉿shell)-[~/THM/picklerick]
 └─$ export inetip=10.10.230.33
-
+~~~
 ---
 ![homepage](../Images/picklerickhomepage.png)
 ##### SCAN
